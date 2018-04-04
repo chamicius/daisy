@@ -1,9 +1,9 @@
 $( document ).ready(function() {
-//Табы
+//Tabs
     $( "#tabs" ).tabs();
   
 
-//плавная прокрутка кнопка
+//Smooth scrolling button
     $('.go_to').click( function(){ // ловим клик по ссылке с классом go_to
 	var scroll_el = $(this).attr('action'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
         if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
@@ -13,7 +13,7 @@ $( document ).ready(function() {
     });
 
 
-//Плавная прокрутка меню
+//Smooth scrolling menu
     $('.go_to_section').click( function(){ // ловим клик по ссылке с классом go_to
 	var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
         if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
@@ -24,12 +24,11 @@ $( document ).ready(function() {
 
 
 
-//Гамбургер
+//Humburger
 
  if ($(window).width() > 1023) {
         $( ".cross" ).hide();
         $( ".hamburger" ).hide();
-        
     }
     else {
         $( ".cross" ).hide();
@@ -42,7 +41,6 @@ $( document ).ready(function() {
                 $( ".cross" ).show();
              });
         });
-
         $( ".cross" ).click(function() {
             $( ".menu" ).slideToggle( "slow", function() {
             $( ".cross" ).hide();
@@ -50,5 +48,4 @@ $( document ).ready(function() {
             });
         });
     }
-
 });
